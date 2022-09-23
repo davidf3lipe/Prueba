@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { AddComponent } from './component/add/add.component';
 import { EditComponent } from './component/edit/edit.component';
 import { LoginComponent } from './component/login/login.component';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeComponent } from './component/home/home.component';
@@ -25,7 +26,8 @@ import { HomeComponent } from './component/home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

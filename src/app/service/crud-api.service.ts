@@ -9,10 +9,14 @@ import { model } from './model';
 })
 export class CrudApiService {
 GET:string="https://jsonplaceholder.typicode.com/posts";
+POST:string="https://jsonplaceholder.typicode.com/posts";
   constructor(private client:HttpClient) { }
 
   ReadData(){
     return this.client.get(this.GET) ;
+  }
+  AddData(data:model):Observable<any>{
+    return this.client.post(this.POST,data);
   }
 
 }

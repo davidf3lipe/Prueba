@@ -1,19 +1,28 @@
-<p>add works!</p>
+<p>In this section you can add data</p>
 <div class="card">
     <div class="card-header">
-        Header
+        Please fill the form
     </div>
     <div class="card-body">
 
-        <form>
+        <form [formGroup]="dataForm" (ngSubmit)="addData()">
+
             <div class="mb-3">
-              <label for="" class="form-label">Add</label>
-              <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Title">
-              <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Body">
+              <label for="" class="form-label">Title</label>
+              <input type="text"
+                class="form-control" name="" formControlName="title"id="" aria-describedby="helpId" placeholder="Write a Title">
             </div>
-            <button type="button" class="btn btn-success">Send</button>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Body</label>
+              <input type="text"
+                class="form-control" name="" formControlName="body" id="" aria-describedby="helpId" placeholder="Write a body">
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Send</button>
 
         </form>
 
     </div>
+
 </div>
