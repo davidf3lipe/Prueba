@@ -1,0 +1,33 @@
+<p>Item List and description</p>
+
+<div class="card">
+    <div class="card-header">
+        Table for items
+        <button type="success" class="btn btn-primary" (click)="redirect()">Add Item</button>
+    </div>
+    <div class="card-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Body</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let data of Data;let iControl = index">
+                        <td>{{data.id}}</td>
+                        <td>{{data.title}}</td>
+                        <td>{{data.body}}</td>
+                        <td>
+                        <a routerLink="/edit/{{data.id}}">Edit</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        
+    </div>
+
+</div>
