@@ -14,9 +14,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Instrucciones para correr la Aplicación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para esta apliación se necesita instalar bootstrap 5 en el proyecto con el comando `npm install bootstrap`
+
+Tambien requiere instalar el servicio de cookies con el siguiente comando `npm install ngx-cookie-service --save`
+
+Para desplegarlo en producción debe correr el comando `ng build` y subir la carpeta dist generada al servidor web que se va a usar
+
 
 ## Running end-to-end tests
 

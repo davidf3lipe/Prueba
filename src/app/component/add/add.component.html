@@ -10,13 +10,27 @@
             <div class="mb-3">
               <label for="" class="form-label">Title</label>
               <input type="text"
-                class="form-control" name="" formControlName="title"id="" aria-describedby="helpId" placeholder="Write a Title">
+                class="form-control" name="" formControlName="title"id="" aria-describedby="helpId" placeholder="Write a Title" required>
+                <span *ngIf="this.dataForm.get('title')?.errors?.['required']">
+                    (You must write a title)
+                  </span>
+                  <span *ngIf="this.dataForm.get('title')?.errors?.['minlength']">
+                    (Title needs to have 3 characters at least)
+                  </span>
             </div>
 
             <div class="mb-3">
               <label for="" class="form-label">Body</label>
               <input type="text"
                 class="form-control" name="" formControlName="body" id="" aria-describedby="helpId" placeholder="Write a body">
+
+                <span *ngIf="this.dataForm.get('body')?.errors?.['required']">
+                    (You must write a body)
+                  </span>
+                  <span *ngIf="this.dataForm.get('body')?.errors?.['minlength']">
+                    (Body needs to have 3 characters at least)
+                  </span>
+
             </div>
 
             <button type="submit" class="btn btn-primary" >Send</button>

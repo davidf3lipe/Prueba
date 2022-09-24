@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { model } from './model';
+import { HomeComponent } from '../component/home/home.component';
+
 
 
 @Injectable({
@@ -17,6 +19,9 @@ POST:string="https://jsonplaceholder.typicode.com/posts";
   }
   AddData(data:model):Observable<any>{
     return this.client.post(this.POST,data);
+  }
+  editbyId(Id:any):Observable<any>{
+    return this.client.get(this.POST+Id) ;
   }
 
 }
